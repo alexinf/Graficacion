@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <title>GRAFICACION</title>
+    <script src="prueba2.js"></script>
+    <script src="flood-fill.js"></script>
+    <script src="bucket.js"></script>
+    <script src="colour-swatch.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>  
+    
+    <center>
+            <h1  class="titulo">GRAFICACION</h1>
+    </center>
+    <canvas id="canvas1" width="400" height="400"></canvas>
+    <script>
+            (function() {
+           var ctx = canvas1.getContext('2d');
+           // Stroke some overlapping shapes to create plenty of fill areas
+           ColourSwatch(Bucket(canvas1), [
+               '#800000', 
+               '#ff0000', 
+               '#ff8000', 
+               '#ffff00', 
+               '#80ff00', 
+               '#00ff80', 
+               '#00ffff', 
+               '#0080ff', 
+               '#8000ff', 
+               '#ff00ff', 
+               '#ff0080', 
+               '#800080', 
+               '#000080', 
+               '#0000ff', 
+               '#000000', 
+               '#808080', 
+               '#ffffff'
+           ], document.body);
+       })();
+       </script>
+       <br/>
+            <label for="">x0</label>
+            <input type="number" value="0" id="x0" autofocus>
+
+            <label for="">y0</label>
+            <input type="number" value="0" id="y0" autofocus>
+        
+            <label for="">x1</label>
+            <input type="number" value="0" id="x1" autofocus>
+        
+            <label for="">y1</label>
+            <input type="number" value="0" id="y1" autofocus>
+
+    <button onclick="line(x0.value,y0.value,x1.value,y1.value)" class="boton_personalizado" >Linea BRES</button>
+    <!--<button onclick="line(100,100,200,200)">dibujar Linea</button>-->
+    <button onclick="DDA(x0.value,y0.value,x1.value,y1.value)" class="boton_personalizado" >Linea DDA</button>
+            <label for="">RADIO</label>
+            <input type="number" value="0" id="radio" autofocus>
+    <button onclick="dibujarCirculoBresenham(radio.value, 200, 200)" class="boton_personalizado" >Circulo BRES</button>
+    <button onclick="rotar_1(eje.value)" class="boton_personalizado" >Rotar GRAF</button>
+    <button onclick="figuras()" class="boton_personalizado" >Figuras</button>
+    <br/>
+    <center>
+    <br/>
+    <button onclick="clearcanvas()" class="button_clear"> Limpiar Pantalla </button>
+    <br/>
+    
+    </center>
+    <div class="autor">Alexander Marquez</div>
+</body>
+</html>

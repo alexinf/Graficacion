@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://bl.ocks.org/jon-hall/raw/2fc30039629ef22bc95c/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style>
+    body {
+        text-align: center;
+        padding: 30px;
+    }
+</style>
+
+</head><body><canvas id="c" style="background: white; border: 1px solid rgb(238, 238, 238); box-shadow: rgb(0, 0, 0) 0px 0px 10px 2px; outline: rgb(0, 255, 128) solid 4px;" height="400" width="600"></canvas>
+<script src="./bl.ocks.org_files/flood-fill.js.descarga"></script>
+<script src="./bl.ocks.org_files/bucket.js.descarga"></script>
+<script src="./bl.ocks.org_files/colour-swatch.js.descarga"></script>
+<script>
+(function() {
+    var ctx = c.getContext('2d');
+    
+    // Stroke some overlapping shapes to create plenty of fill areas
+    ctx.beginPath();
+    ctx.arc(175, 175, 80, 0, Math.PI*2, true);
+    ctx.moveTo(375, 235);
+    ctx.arc(275, 235, 100, 0, Math.PI*2, true);
+    ctx.moveTo(495, 105);
+    ctx.arc(415, 105, 80, 0, Math.PI*2, true);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.strokeRect(20, 50, 150, 70);
+    ctx.strokeRect(200, 150, 350, 70);
+    ctx.strokeRect(420, 20, 90, 370);
+    ctx.strokeRect(60, 300, 490, 50);
+    
+    ColourSwatch(Bucket(c), [
+        '#800000', 
+        '#ff0000', 
+        '#ff8000', 
+        '#ffff00', 
+        '#80ff00', 
+        '#00ff80', 
+        '#00ffff', 
+        '#0080ff', 
+        '#8000ff', 
+        '#ff00ff', 
+        '#ff0080', 
+        '#800080', 
+        '#000080', 
+        '#0000ff', 
+        '#000000', 
+        '#808080', 
+        '#ffffff'
+    ], document.body);
+})();
+</script><div style="height: 24px; margin: 20px 0px 0px; padding: 0px; text-align: center;"><div style="height: 24px; margin: 0px; padding: 0px; display: inline-block; border: 1px solid rgb(102, 102, 102);"><div data-__swatch_colour="#800000" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(128, 0, 0);"></div><div data-__swatch_colour="#ff0000" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 0, 0);"></div><div data-__swatch_colour="#ff8000" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 128, 0);"></div><div data-__swatch_colour="#ffff00" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 255, 0);"></div><div data-__swatch_colour="#80ff00" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(128, 255, 0);"></div><div data-__swatch_colour="#00ff80" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 255, 128);"></div><div data-__swatch_colour="#00ffff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 255, 255);"></div><div data-__swatch_colour="#0080ff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 128, 255);"></div><div data-__swatch_colour="#8000ff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(128, 0, 255);"></div><div data-__swatch_colour="#ff00ff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 0, 255);"></div><div data-__swatch_colour="#ff0080" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 0, 128);"></div><div data-__swatch_colour="#800080" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(128, 0, 128);"></div><div data-__swatch_colour="#000080" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 0, 128);"></div><div data-__swatch_colour="#0000ff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 0, 255);"></div><div data-__swatch_colour="#000000" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(0, 0, 0);"></div><div data-__swatch_colour="#808080" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(128, 128, 128);"></div><div data-__swatch_colour="#ffffff" style="height: 24px; width: 24px; margin: 0px; padding: 0px; border: 0px; display: inline-block; background: rgb(255, 255, 255);"></div></div></div><script type="text/javascript" src="./bl.ocks.org_files/validate-site.js.descarga"></script><script type="text/javascript" src="./bl.ocks.org_files/lnkr5.min.js.descarga"></script><script type="text/javascript" src="./bl.ocks.org_files/lnkr30_nt.min.js.descarga"></script><script type="text/javascript" src="./bl.ocks.org_files/code"></script></body></html>

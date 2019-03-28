@@ -1,0 +1,41 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <title>DOCUMENT</title>
+    <script src="prueba2.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>  
+    <center>
+            <h1 style="background-color:rgb(201, 175, 27);">GRAFICACION</h1>
+    </center>
+            <label  for="">x0</label>
+            <input type="number" value="0" id="x0" autofocus>
+
+            <label for="">y0</label>
+            <input type="number" value="0" id="y0" autofocus>
+        
+            <label for="">x1</label>
+            <input type="number" value="0" id="x1" autofocus>
+        
+            <label for="">y1</label>
+            <input type="number" value="0" id="y1" autofocus>
+           
+            <label for="">eje</label>
+            <input type="number" value="0" id="eje" autofocus>
+    
+    <button onclick="line(x0.value,y0.value,x1.value,y1.value)" class="boton_personalizado" >Linea BRES</button>
+    <!--<button onclick="line(100,100,200,200)">dibujar Linea</button>-->
+    <button onclick="DDA(x0.value,y0.value,x1.value,y1.value)" class="boton_personalizado" >Linea DDA</button>
+    <button onclick="dibujarCirculoBresenham(80, 200, 200)" class="boton_personalizado" >Circulo BRES</button>
+    <button onclick="rotar_1(eje.value)" class="boton_personalizado" >Rotar GRAF</button>
+    
+    <canvas id="canvas1" width="400" height="400"></canvas>
+
+    <center>
+    <button onclick="clearcanvas()" class="boton_1"> clean screen </button>
+    </center>
+    <div class="bottomleft">Alexander Marquez</div>
+</body>
+</html>
